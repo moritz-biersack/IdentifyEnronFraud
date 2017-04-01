@@ -111,7 +111,7 @@ persons do not have any value for them.
 Taking a look at the salary and bonus values we can see a major outlier 
 in the plot. It is some magnitudes higher for both bonus and salary.
 
-[Outlier-1](outlier-1.png)
+![Outlier-1](outlier-1.png "Outlier before cleaning")
 
 When we take a closer look at the exact values and compare it with the
 information provided in the "enron61702insiderpay.pdf" document, we find
@@ -123,7 +123,7 @@ studies.
 After removing the outlier and plotting the data again, we see four more
 data points that are outstanding.
 
-[Outlier-2](outlier-1.png)
+![Outlier-2](outlier-1.png "Outliers after cleaning")
 
 Again comparing it with the insider pay document, we find out that the new
 outliers include the former (infamous) CEOs "Kenneth Lay" and "Jeffrey 
