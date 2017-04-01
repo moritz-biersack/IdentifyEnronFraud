@@ -123,7 +123,7 @@ studies.
 After removing the outlier and plotting the data again, we see four more
 data points that are outstanding.
 
-![Outlier-2](outlier-1.png "Outliers after cleaning")
+![Outlier-2](outlier-2.png "Outliers after cleaning")
 
 Again comparing it with the insider pay document, we find out that the new
 outliers include the former (infamous) CEOs "Kenneth Lay" and "Jeffrey 
