@@ -128,9 +128,30 @@ data points that are outstanding.
 Again comparing it with the insider pay document, we find out that the new
 outliers include the former (infamous) CEOs "Kenneth Lay" and "Jeffrey 
 Skilling". It makes no sense to take out these data points.
+
+### Feature selection
+
+- First features are selected, that intuitivly make sense (17 overall)
+- Both PCA and SelectKBest are included to reduce dimensions
+- FeatureUnion is used to concatinate both transformations
+- A pipeline is generated with the combined features and the classifier
+- To find the best parameters, GridSearchCV is used
+- StratifiedShuffleSplit is used as cross validation method
  
+SVC best performance:
+{'clf__gamma': 0.03, 'features__pca__n_components': 1, 'clf__C': 160, 'features__univ_select__k': 1}
+Accuracy: 0.87193	Precision: 0.59427	Recall: 0.12450	F1: 0.20587	F2: 0.14788
+
+GBC
+{'features__pca__n_components': 2, 'clf__loss': 'deviance', 'clf__learning_rate': 0.8, 'clf__n_estimators': 140, 'features__univ_select__k': 1}
+        Accuracy: 0.83487       Precision: 0.35448      Recall: 0.29050 F1: 0.31932     F2: 0.30138
 
 ## References
 
 **[cmu2015]** - Enron Email Dataset (May 7, 2015 Version of dataset), William W. Cohen, MLD, CMU
 http://www.cs.cmu.edu/~enron/
+
+Setup of 'StratifiedShuffleSplit' and 'GridSearchCV'
+https://discussions.udacity.com/t/final-project-code/199246/7
+
+
